@@ -14,15 +14,13 @@ public class ProductRestController {
 
     private final ProductRepository productRepository;
 
+    //등록된 전체 상품 조회
     @GetMapping("/api/products")
     public List<Product> getProduct(){
+
         return productRepository.findAll();
     }
 
-//    @PutMapping("/api/products/{id}")
-//    public Long getUpdate(@PathVariable Long id){
-//
-//    }
 
     //신규 상품 등록
     @PostMapping("api/products")

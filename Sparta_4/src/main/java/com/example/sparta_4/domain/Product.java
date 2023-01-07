@@ -1,5 +1,6 @@
 package com.example.sparta_4.domain;
 
+import com.example.sparta_4.dto.ItemDto;
 import com.example.sparta_4.dto.ProductMypriceRequestDto;
 import com.example.sparta_4.dto.ProductRequestDto;
 import lombok.Getter;
@@ -41,6 +42,10 @@ public class Product {
 
     public void update(ProductMypriceRequestDto productMypriceRequestDto){
         this.myprice=productMypriceRequestDto.getMyprice();
+    }
+
+    public void updateByItemDto(ItemDto itemDto){
+        this.lprice=itemDto.getLprice();
     }
 
 }
